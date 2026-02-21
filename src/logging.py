@@ -10,7 +10,7 @@ def setup_logging() -> None:
             "disable_existing_loggers": False,
             "formatters": {
                 "default": {
-                    "format": "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
+                    "format": "%(asctime)s | %(levelname)-8s | %(name)s | [%(filename)s:%(lineno)d] | %(message)s",
                 },
             },
             "handlers": {
@@ -19,6 +19,9 @@ def setup_logging() -> None:
                     "formatter": "default",
                     "stream": "ext://sys.stdout",
                 },
+            },
+            "loggers": {
+                "openai.agents": {"level": "INFO"},
             },
             "root": {
                 "level": settings.log_level,
