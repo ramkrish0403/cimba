@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     host: str = "0.0.0.0"
     port: int = 8000
+    OPENAI_API_KEY: str
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 
