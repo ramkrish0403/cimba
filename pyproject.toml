@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "dataclasses-json>=0.6.7",
     "fastapi>=0.129.0",
     "httpx>=0.28.1",
     "langgraph>=1.0.9",
