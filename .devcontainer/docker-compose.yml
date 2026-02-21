@@ -1,0 +1,17 @@
+services:
+  # ---------------------------------------------------------------------------
+  # MAIN APPLICATION
+  # ---------------------------------------------------------------------------
+  cimba:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+    command: tail -f /dev/null
+    networks:
+      - dev_network
+
+networks:
+  dev_network:
+    external: false

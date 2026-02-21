@@ -1,0 +1,19 @@
+[project]
+name = "cimba"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.129.0",
+    "langgraph>=1.0.9",
+    "openai-agents>=0.9.3",
+]
+
+[dependency-groups]
+dev = [
+    "ipywidgets>=8.1.8",
+    "jupyter>=1.1.1",
+    "pytest>=9.0.2",
+    "ruff>=0.15.2",
+]

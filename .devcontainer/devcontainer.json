@@ -1,0 +1,35 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-mongo
+{
+    "name": "Cimba",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "cimba",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "charliermarsh.ruff",
+                // "github.vscode-pull-request-github",
+                // "eamodio.gitlens",
+                "ms-toolsai.jupyter",
+                "tomoki1207.pdf",
+                "GitHub.copilot"
+            ]
+        }
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "chmod +x ./post_create.sh && ./post_create.sh",
+    "postCreateCommand": "chmod +x ./.devcontainer/post_create.sh && ./.devcontainer/post_create.sh",
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "work",
+    "shutdownAction": "stopCompose"
+}
